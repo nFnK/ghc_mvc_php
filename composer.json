@@ -1,0 +1,7 @@
+{
+	"name": "GHC",
+	 "version": "1.1.0",
+    "require": {
+        "monolog/monolog": "1.0.*"
+    }
+}
