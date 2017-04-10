@@ -67,7 +67,7 @@ class Bootstrap {
         $this->_defaultFile = trim($path, '/');
     }
 
-	// http://localhost/kontroler/metoda/{param}
+	// mvc/kontroler/metoda/{param}
 	// url[0] = kontroler
 	// url[1] = metoda
 	// url[2] = kraj/param
@@ -86,7 +86,7 @@ class Bootstrap {
 			}
 		}
 
-		//OVAJJJJ switch odlucuje sta ce se ucitati////prepraviti svak koemntar u ovom fajlu!
+		//sta ce se ucitati
 		switch ($length) {
 			case '5':
 				//kontroler->metda(param1, param2, param3)
@@ -105,11 +105,12 @@ class Bootstrap {
 				$this->_controller->{$this->_url[1]}();
 				break;
 			default:
-			//komentarsicau poslije testriranja/debug
-			//print_r($this->_url);
-			// die('Provjerite vas Bootstrap fajl, nesto nije u redu sa parametrima.');	
-			// break;
-			$this->_controller->index();
+			
+			print_r($this->_url);
+			die('Provjerite vas Bootstrap fajl, nesto nije u redu sa parametrima.');	
+			break;
+			
+			//$this->_controller->index();
 		}
 	}
 
